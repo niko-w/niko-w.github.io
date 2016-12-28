@@ -1,3 +1,126 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!doctype html>
 
 
@@ -121,7 +244,7 @@ hexo官方文档
 hexo主题更换为next
 next官方文档">
 <meta property="og:image" content="http://yoursite.com/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161228213607.png">
-<meta property="og:updated_time" content="2016-12-28T14:25:30.508Z">
+<meta property="og:updated_time" content="2016-12-28T14:42:02.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客搭建过程——Hexo+GithubPage">
 <meta name="twitter:description" content="参考文章
@@ -408,9 +531,9 @@ next官方文档">
 <blockquote>
 <p>博主建议：对于git操作不熟悉的可以直接使用第一种方式部署，简单快速，也不易出错。</p>
 </blockquote>
-<h5 id="hexo-deploye部署"><a href="#hexo-deploye部署" class="headerlink" title="hexo deploye部署"></a>hexo deploye部署</h5><ul>
+<h4 id="hexo-deploye部署"><a href="#hexo-deploye部署" class="headerlink" title="hexo deploye部署"></a>hexo deploye部署</h4><ul>
 <li><p>配置deploy<br>  找到站点配置文件<code>_config.yml</code>(在blog文件夹下)，用编辑器打开此文件<br>  找到此文件的deploy字段，按照以下配置</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"> 	<span class="built_in">type</span>: git</div><div class="line"> 	repo: git@github.com:niko-w/niko-w.github.io.git</div><div class="line"> 	branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">	<span class="built_in">type</span>: git</div><div class="line">  	repo: git@github.com:niko-w/niko-w.github.io.git</div><div class="line">  	branch: master</div></pre></td></tr></table></figure>
 </li>
 <li><p>在此操作之前需要安装一个扩展：</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
@@ -419,9 +542,19 @@ next官方文档">
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="git-push方法"><a href="#git-push方法" class="headerlink" title="git push方法"></a>git push方法</h5><pre><code>待补充……
-</code></pre><p>部署成功后，在浏览器中输入你的repository-name就可以访问你的博客了，楼主的是<a href="http://niko-w.github.io" target="_blank" rel="external">niko-w.github.io</a></p>
-<h3 id="域名购买和解析"><a href="#域名购买和解析" class="headerlink" title="域名购买和解析"></a>域名购买和解析</h3>
+<h4 id="git-push方法"><a href="#git-push方法" class="headerlink" title="git push方法"></a>git push方法</h4><p>待补充……</p>
+<p>部署成功后，在浏览器中输入你的repository-name就可以访问你的博客了，楼主的是<a href="http://niko-w.github.io" target="_blank" rel="external">niko-w.github.io</a></p>
+<h3 id="域名购买和解析"><a href="#域名购买和解析" class="headerlink" title="域名购买和解析"></a>域名购买和解析</h3><ul>
+<li>在阿里云购买域名进行解析，解析方法请百度</li>
+<li>进入blog下的public文件夹，新建CNAME<br>  通过鼠标右键-&gt;新建txt文档，将文件名改为CNAME，注意不要保留后缀.txt</li>
+<li>在CNAME中添加你的域名，比如我的niko99.me</li>
+<li>将CNAME文件上传到GitHub上<br>  执行命令<code>hexo d</code></li>
+</ul>
+<hr>
+<blockquote>
+<p>以上就是搭建博客的整个流程，写的比较粗糙，很多内容待完善和补充……<br>各位看官就将就着看吧 (<em>^__^</em>) </p>
+</blockquote>
+
       
     </div>
 
@@ -611,7 +744,7 @@ next官方文档">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署blog到GitHubPages上"><span class="nav-number">4.</span> <span class="nav-text">部署blog到GitHubPages上</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#hexo-deploye部署"><span class="nav-number">4.0.1.</span> <span class="nav-text">hexo deploye部署</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git-push方法"><span class="nav-number">4.0.2.</span> <span class="nav-text">git push方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名购买和解析"><span class="nav-number">5.</span> <span class="nav-text">域名购买和解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署blog到GitHubPages上"><span class="nav-number">4.</span> <span class="nav-text">部署blog到GitHubPages上</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-deploye部署"><span class="nav-number">4.1.</span> <span class="nav-text">hexo deploye部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-push方法"><span class="nav-number">4.2.</span> <span class="nav-text">git push方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名购买和解析"><span class="nav-number">5.</span> <span class="nav-text">域名购买和解析</span></a></li></ol></div>
             
           </div>
         </section>
