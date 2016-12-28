@@ -1,126 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!doctype html>
 
 
@@ -244,7 +121,9 @@ hexo官方文档
 hexo主题更换为next
 next官方文档">
 <meta property="og:image" content="http://yoursite.com/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161228213607.png">
-<meta property="og:updated_time" content="2016-12-28T14:42:02.127Z">
+<meta property="og:image" content="http://yoursite.com/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161229001615.png">
+<meta property="og:image" content="http://yoursite.com/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161229002217.png">
+<meta property="og:updated_time" content="2016-12-28T16:23:11.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客搭建过程——Hexo+GithubPage">
 <meta name="twitter:description" content="参考文章
@@ -509,10 +388,7 @@ next官方文档">
 <p>启动成功后，通过访问<code>http:localhost:4000</code>就可以查看到网站内容。</p>
 <p>注意：可能访问上面的网址时，没有反应，这时很有可能是4000端口被占用了，这时通过下面的命令更改端口即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s --port=5000</div></pre></td></tr></table></figure>
-<h3 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h3><ol>
-<li>注册成功GitHub后，新建repository<img src="/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161228213607.png" alt="QQ截图20161228213607.png" title="">
-</li>
-</ol>
+<h3 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h3><h4 id="注册成功GitHub后，新建repository"><a href="#注册成功GitHub后，新建repository" class="headerlink" title="注册成功GitHub后，新建repository"></a>注册成功GitHub后，新建repository</h4><img src="/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161228213607.png" alt="QQ截图20161228213607.png" title="">
 <ul>
 <li>repository-name为你GitHub账户的用户名+github.io,比如我的GitHub账户名为niko-w,则新建的repository-name为niko-w.github.io</li>
 <li>Description里随便填一下你的描述就好</li>
@@ -520,9 +396,7 @@ next官方文档">
 <li>选中Initilize this respository with a README</li>
 <li>最后点击绿色按钮创建</li>
 </ul>
-<ol>
-<li>配置SSH-key<br>配置详情方法请参考<a href="http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="external">此处</a></li>
-</ol>
+<h4 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH-key"></a>配置SSH-key</h4><p>配置详情方法请参考<a href="http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="external">此处</a></p>
 <h3 id="部署blog到GitHubPages上"><a href="#部署blog到GitHubPages上" class="headerlink" title="部署blog到GitHubPages上"></a>部署blog到GitHubPages上</h3><p>两种部署方式：</p>
 <ul>
 <li>使用<code>hexo deploy</code>部署</li>
@@ -542,7 +416,19 @@ next官方文档">
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="git-push方法"><a href="#git-push方法" class="headerlink" title="git push方法"></a>git push方法</h4><p>待补充……</p>
+<h4 id="git-push方法"><a href="#git-push方法" class="headerlink" title="git push方法"></a>git push方法</h4><ul>
+<li>进入到blob文件夹下的public文件夹下，执行下面命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"message"</span>//引号内的内容科技自己书写</div><div class="line">git remote add origin git@github.com:niko-w/niko-w.github.io//本地仓库链接到远程仓库</div><div class="line">git push -u origin master//第一次推送这样写</div><div class="line">git push origin master//以后每次推送可以这样写</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>git相关操作可参考<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰git教程</a></p>
+<ul>
+<li>在push的过程中可能会遇到一些问题<br>** push失败 报<code>failed to push some refs to &#39;https://github.com/niko-w/niko-w.github.io&#39;</code>,如下图：<img src="/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161229001615.png" alt="QQ截图20161229001615.png" title="">
+</li>
+</ul>
+<p>这个问题主要是由于GitHub上ReadMe文件没有同步到本地仓库中，通过执行命令<code>git pull --rebase origin master</code>来解决</p>
+<p>** git pull –rebase origin master有冲突<br>解决冲突，执行以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add -u</div><div class="line">git rebase --continue</div></pre></td></tr></table></figure></p>
+<p>** 最后再执行下面的命令即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<img src="/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161229002217.png" alt="QQ截图20161229002217.png" title="">
 <p>部署成功后，在浏览器中输入你的repository-name就可以访问你的博客了，楼主的是<a href="http://niko-w.github.io" target="_blank" rel="external">niko-w.github.io</a></p>
 <h3 id="域名购买和解析"><a href="#域名购买和解析" class="headerlink" title="域名购买和解析"></a>域名购买和解析</h3><ul>
 <li>在阿里云购买域名进行解析，解析方法请百度</li>
@@ -744,7 +630,7 @@ next官方文档">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署blog到GitHubPages上"><span class="nav-number">4.</span> <span class="nav-text">部署blog到GitHubPages上</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-deploye部署"><span class="nav-number">4.1.</span> <span class="nav-text">hexo deploye部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-push方法"><span class="nav-number">4.2.</span> <span class="nav-text">git push方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名购买和解析"><span class="nav-number">5.</span> <span class="nav-text">域名购买和解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注册成功GitHub后，新建repository"><span class="nav-number">3.1.</span> <span class="nav-text">注册成功GitHub后，新建repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置SSH-key"><span class="nav-number">3.2.</span> <span class="nav-text">配置SSH-key</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署blog到GitHubPages上"><span class="nav-number">4.</span> <span class="nav-text">部署blog到GitHubPages上</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-deploye部署"><span class="nav-number">4.1.</span> <span class="nav-text">hexo deploye部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-push方法"><span class="nav-number">4.2.</span> <span class="nav-text">git push方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名购买和解析"><span class="nav-number">5.</span> <span class="nav-text">域名购买和解析</span></a></li></ol></div>
             
           </div>
         </section>
