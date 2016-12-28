@@ -107,21 +107,27 @@
 
 
 <meta name="description" content="参考文章
-http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more 
-http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=">
+博客部署
+hexo官方文档 
+hexo主题更换为next
+next官方文档">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的博客搭建过程——Hexo+GithubPage">
 <meta property="og:url" content="http://yoursite.com/2016/12/27/我的博客搭建过程——Hexo+GithubPage/index.html">
 <meta property="og:site_name" content="Niko的园地">
 <meta property="og:description" content="参考文章
-http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more 
-http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=">
-<meta property="og:updated_time" content="2016-12-28T05:36:12.337Z">
+博客部署
+hexo官方文档 
+hexo主题更换为next
+next官方文档">
+<meta property="og:updated_time" content="2016-12-28T13:19:31.813Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客搭建过程——Hexo+GithubPage">
 <meta name="twitter:description" content="参考文章
-http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more 
-http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=">
+博客部署
+hexo官方文档 
+hexo主题更换为next
+next官方文档">
 
 
 
@@ -317,8 +323,10 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
 
       
         <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
-<li><a href="http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="external">http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more</a> </li>
-<li><a href="http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=tuicool&amp;utm_medium=referral</a></li>
+<li><a href="http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="external">博客部署</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo官方文档</a> </li>
+<li><a href="http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">hexo主题更换为next</a></li>
+<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next官方文档</a></li>
 </ul>
 <hr>
 <a id="more"></a>
@@ -334,23 +342,29 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
 </ol>
 <p>以上三条语句执行完毕，会在<code>blog</code>文件夹下面看到如下的目录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">├── _config.yml //网站的配置信息，您可以在此配置大部分的参数。 </div><div class="line">├── package.json </div><div class="line">├── scaffolds //模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。 </div><div class="line">├── <span class="built_in">source</span> //资源文件夹是存放用户资源的地方。</div><div class="line"> | ├── _posts </div><div class="line">└── themes //主题文件夹。Hexo会根据主题来生成静态页面。</div></pre></td></tr></table></figure>
-<p>最后看看自己的文章</p>
+<ol>
+<li>最后看看自己的文章</li>
+</ol>
 <ul>
-<li>新建一篇文章<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm new <span class="string">"my first blog"</span></div></pre></td></tr></table></figure>
+<li>新建一篇文章<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"my first blog"</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>执行该命令后会在/source/_post里自动生成了“my first blog.md”文件，之后新建的文章都将存放在此目录下。编辑“my.first blog.md”文件可修改内容。</p>
 <ul>
 <li><p>生成网站</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm genereate,可简写成npm g</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo genereate,可简写成hexo g</div></pre></td></tr></table></figure>
 </li>
 <li><p>启动本地服务器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm server,可简写成npm s</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server,可简写成hexo s</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>启动成功后，通过访问<code>http:localhost:4000</code>就可以查看到网站内容。</p>
 <p>注意：可能访问上面的网址时，没有反应，这时很有可能是4000端口被占用了，这时通过下面的命令更改端口即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm s --port=5000</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s --port=5000</div></pre></td></tr></table></figure>
+<h3 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h3><ol>
+<li>注册成功GitHub后，新建repository</li>
+</ol>
+<p>repository-name为你GitHub账户的用户名+github.io,比如我的GitHub账户名为niko-w,则新建的repository-name为niko-w.github.io<br>Description里随便填一下你的描述就好<br>Public选中<br>选中Initilize this respository with a README<br>最后点击绿色按钮创建</p>
 
       
     </div>
@@ -538,7 +552,7 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a></li></ol></div>
             
           </div>
         </section>
