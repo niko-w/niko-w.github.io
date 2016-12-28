@@ -45,17 +45,35 @@
   
 
   
+    
+      
+    
 
-  
-
+    
   
 
   
 
   
     
+      
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -98,7 +116,7 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
 <meta property="og:description" content="参考文章
 http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more 
 http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=">
-<meta property="og:updated_time" content="2016-12-28T05:33:11.656Z">
+<meta property="og:updated_time" content="2016-12-28T05:36:12.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客搭建过程——Hexo+GithubPage">
 <meta name="twitter:description" content="参考文章
@@ -115,8 +133,8 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
-      author: '博主'
+      userId: 6369026710448375000,
+      author: 'niko'
     }
   };
 </script>
@@ -180,6 +198,16 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -262,6 +290,13 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/27/我的博客搭建过程——Hexo+GithubPage/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/27/我的博客搭建过程——Hexo+GithubPage/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -301,12 +336,16 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">├── _config.yml //网站的配置信息，您可以在此配置大部分的参数。 </div><div class="line">├── package.json </div><div class="line">├── scaffolds //模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。 </div><div class="line">├── <span class="built_in">source</span> //资源文件夹是存放用户资源的地方。</div><div class="line"> | ├── _posts </div><div class="line">└── themes //主题文件夹。Hexo会根据主题来生成静态页面。</div></pre></td></tr></table></figure>
 <p>最后看看自己的文章</p>
 <ul>
-<li>新建一片文章<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm new <span class="string">"my first blog"</span></div></pre></td></tr></table></figure>
+<li>新建一篇文章<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm new <span class="string">"my first blog"</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>执行该命令后会在/source/_post里自动生成了“my first blog.md”文件，之后新建的文章都将存放在此目录下。编辑“my.first blog.md”文件可修改内容。</p>
 <ul>
-<li>生产网站<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm genereate,可简写成npm g</div><div class="line">```  </div><div class="line"></div><div class="line">+ 启动本地服务器</div><div class="line">```bash</div><div class="line">npm server,可简写成npm s</div></pre></td></tr></table></figure>
+<li><p>生成网站</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm genereate,可简写成npm g</div></pre></td></tr></table></figure>
+</li>
+<li><p>启动本地服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm server,可简写成npm s</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>启动成功后，通过访问<code>http:localhost:4000</code>就可以查看到网站内容。</p>
@@ -378,6 +417,10 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
           
   <div class="comments" id="comments">
     
+      <div class="ds-thread" data-thread-key="2016/12/27/我的博客搭建过程——Hexo+GithubPage/"
+           data-title="我的博客搭建过程——Hexo+GithubPage" data-url="http://yoursite.com/2016/12/27/我的博客搭建过程——Hexo+GithubPage/">
+      </div>
+    
   </div>
 
 
@@ -430,7 +473,7 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -448,6 +491,35 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/niko-w" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/Niko-wang-3-91/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/3198981922/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
           
         </div>
 
@@ -580,9 +652,32 @@ http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"niko99"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
 
 
 
