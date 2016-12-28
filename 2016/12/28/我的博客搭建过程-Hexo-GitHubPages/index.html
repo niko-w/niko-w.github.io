@@ -107,7 +107,7 @@
 
 
 <meta name="description" content="参考文章
-{assert_link http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more [最详尽-hexo+GithubPages搭建博客] %}
+最详尽-hexo+GithubPages搭建博客
 hexo官方文档 
 hexo主题更换为next
 next官方文档">
@@ -116,16 +116,16 @@ next官方文档">
 <meta property="og:url" content="http://yoursite.com/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/index.html">
 <meta property="og:site_name" content="Niko的园地">
 <meta property="og:description" content="参考文章
-{assert_link http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more [最详尽-hexo+GithubPages搭建博客] %}
+最详尽-hexo+GithubPages搭建博客
 hexo官方文档 
 hexo主题更换为next
 next官方文档">
 <meta property="og:image" content="http://yoursite.com/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161228213607.png">
-<meta property="og:updated_time" content="2016-12-28T13:56:59.532Z">
+<meta property="og:updated_time" content="2016-12-28T14:22:11.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客搭建过程——Hexo+GithubPage">
 <meta name="twitter:description" content="参考文章
-{assert_link http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more [最详尽-hexo+GithubPages搭建博客] %}
+最详尽-hexo+GithubPages搭建博客
 hexo官方文档 
 hexo主题更换为next
 next官方文档">
@@ -241,9 +241,32 @@ next官方文档">
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
   
 </nav>
 
@@ -325,7 +348,7 @@ next官方文档">
 
       
         <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
-<li>{assert_link <a href="http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="external">http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more</a> [最详尽-hexo+GithubPages搭建博客] %}</li>
+<li><a href="http://carryguan.me/2016/07/02/hexo-gihubpages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="external">最详尽-hexo+GithubPages搭建博客</a></li>
 <li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo官方文档</a> </li>
 <li><a href="http://oyjt.github.io/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">hexo主题更换为next</a></li>
 <li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next官方文档</a></li>
@@ -367,8 +390,36 @@ next官方文档">
 <li>注册成功GitHub后，新建repository<img src="/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/QQ截图20161228213607.png" alt="QQ截图20161228213607.png" title="">
 </li>
 </ol>
-<p>repository-name为你GitHub账户的用户名+github.io,比如我的GitHub账户名为niko-w,则新建的repository-name为niko-w.github.io<br>Description里随便填一下你的描述就好<br>Public选中<br>选中Initilize this respository with a README<br>最后点击绿色按钮创建</p>
-
+<ul>
+<li>repository-name为你GitHub账户的用户名+github.io,比如我的GitHub账户名为niko-w,则新建的repository-name为niko-w.github.io</li>
+<li>Description里随便填一下你的描述就好</li>
+<li>Public选中</li>
+<li>选中Initilize this respository with a README</li>
+<li>最后点击绿色按钮创建</li>
+</ul>
+<ol>
+<li>配置SSH-key<br>配置详情方法请参考<a href="http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="external">此处</a></li>
+</ol>
+<h3 id="部署blog到GitHubPages上"><a href="#部署blog到GitHubPages上" class="headerlink" title="部署blog到GitHubPages上"></a>部署blog到GitHubPages上</h3><p>两种部署方式：</p>
+<ul>
+<li>使用<code>hexo deploy</code>部署</li>
+<li>使用<code>git push</code>部署</li>
+</ul>
+<blockquote>
+<p>博主建议：对于git操作不熟悉的可以直接使用第一种方式部署，简单快速，也不易出错。</p>
+</blockquote>
+<ol>
+<li>hexo deploye部署</li>
+</ol>
+<p>配置deploy<br>找到站点配置文件<code>_config.yml</code>(在blog文件夹下)，用编辑器打开此文件<br>找到此文件的deploy字段，按照以下配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:niko-w/niko-w.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>在此操作之前需要安装一个扩展：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>然后执行下面的命令，即可将本地内容上传到GitHub中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<ol>
+<li>git push方法</li>
+</ol>
+<p>待补充……</p>
+<p>部署成功后，在浏览器中输入你的repository-name就可以访问你的博客了，楼主的是<a href="http://niko-w.github.io" target="_blank" rel="external">niko-w.github.io</a></p>
+<h3 id="域名购买和解析"><a href="#域名购买和解析" class="headerlink" title="域名购买和解析"></a>域名购买和解析</h3>
       
     </div>
 
@@ -406,6 +457,25 @@ next官方文档">
 
 
     <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/12/28/我的博客搭建过程-Hexo-GitHubPages/"
+     data-title="我的博客搭建过程——Hexo+GithubPage"
+     data-content=""
+     data-url="http://yoursite.com/2016/12/28/我的博客搭建过程-Hexo-GitHubPages/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
       
     </div>
   </div>
@@ -539,7 +609,7 @@ next官方文档">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">1.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册GitHub"><span class="nav-number">3.</span> <span class="nav-text">注册GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署blog到GitHubPages上"><span class="nav-number">4.</span> <span class="nav-text">部署blog到GitHubPages上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名购买和解析"><span class="nav-number">5.</span> <span class="nav-text">域名购买和解析</span></a></li></ol></div>
             
           </div>
         </section>
@@ -691,6 +761,135 @@ next官方文档">
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
   
 
   
