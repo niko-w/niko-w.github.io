@@ -116,7 +116,7 @@
 在要监控的服务器上安装插件ServerAgent，解压ServerAgent-2.2.1.zip文件，进入文件下，运行./startAgent.sh（">
 <meta property="og:image" content="http://yoursite.com/2017/01/23/Jmeter监控插件/QQ截图20170123102308.png">
 <meta property="og:image" content="http://yoursite.com/2017/01/23/Jmeter监控插件/QQ截图20170123102816.png">
-<meta property="og:updated_time" content="2017-01-23T02:31:58.987Z">
+<meta property="og:updated_time" content="2017-01-23T03:12:21.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jmeter监控插件">
 <meta name="twitter:description" content="jmeter服务器监控插件
@@ -369,11 +369,11 @@
 <p> 以上操作后，在windows上打开jmeter，在监听器会看到许多以<code>gp@gc</code>开头的内容：</p>
  <img src="/2017/01/23/Jmeter监控插件/QQ截图20170123102308.png" alt="QQ截图20170123102308.png" title="">
 </li>
-</ol>
-<ol>
-<li>修改jmeter安装路径中：bin/jmeter.properties文件的以下行:（jmeterplugins 和thread有关系所以要修改配置文件）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jmeter.save.saveservice.thread_counts=true</div></pre></td></tr></table></figure>
+<li><p>修改jmeter安装路径中：bin/jmeter.properties文件的以下行:（jmeterplugins 和thread有关系所以要修改配置文件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jmeter.save.saveservice.thread_counts=true</div></pre></td></tr></table></figure>
 </li>
 </ol>
+<a id="more"></a>
 <h3 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h3><p>在linux上运行监控插件生成PNG图片：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java -jar $CMDRunnerPath/CMDRunner.jar --tool Reporter --generate-png ThreadsStateOverTime.png</div><div class="line">--input-jtl 1.jtl --plugin-type ThreadsStateOverTime</div></pre></td></tr></table></figure></p>
 <p>生成LatenciesOverTime图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar /app/jmeter02/app/apache-jmeter-2.9/lib/ext/CMDRunner.jar --tool Reporter --input-jtl /app/jmeter02/app/apache-jmeter-2.9/bin/testresult0825.jtl --plugin-type LatenciesOverTime --generate-png report-latency.png</div></pre></td></tr></table></figure></p>
 <p>生成 TransactionsPerSecond 图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar /app/jmeter02/app/apache-jmeter-2.9/lib/ext/CMDRunner.jar --tool Reporter --input-jtl /app/jmeter02/app/apache-jmeter-2.9/bin/testresult0825.jtl --plugin-type TransactionsPerSecond --generate-png report-transactionPerSec.png</div></pre></td></tr></table></figure></p>
@@ -397,6 +397,9 @@
 <li>TimesVsThreads = Response Times VS Threads 响应时间随线程变化曲线</li>
 <li>TransactionsPerSecond 事务随时间变化曲线</li>
 <li>PageDataExtractorOverTime</li>
+</ol>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ol>
+<li><a href="https://jmeter-plugins.org/wiki/JMeterPluginsCMD/" target="_blank" rel="external">JMeterPluginsCMD官网</a></li>
 </ol>
 
       
@@ -607,7 +610,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jmeter服务器监控插件"><span class="nav-number">1.</span> <span class="nav-text">jmeter服务器监控插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用法："><span class="nav-number">1.1.</span> <span class="nav-text">用法：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jmeter服务器监控插件"><span class="nav-number">1.</span> <span class="nav-text">jmeter服务器监控插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用法："><span class="nav-number">1.1.</span> <span class="nav-text">用法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文章"><span class="nav-number">2.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
           </div>
         </section>
